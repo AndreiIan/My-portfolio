@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f5f7ff;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 80px;
+}
+
+.logo {
+    color: #4a4aff;
+    font-weight: 700;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #eef2ff, #ffffff);
+    min-height: 100vh;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 80px;
+}
+
+.text {
+    max-width: 500px;
+}
+
+.intro {
+    color: #4a4aff;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 15px 0;
+}
+
+h1 span {
+    color: #4a4aff;
+}
+
+.desc {
+    color: #555;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #4a4aff;
+    color: white;
+}
+
+.primary:hover {
+    background: #3434d9;
+}
+
+.secondary {
+    border: 2px solid #4a4aff;
+    color: #4a4aff;
+}
+
+.secondary:hover {
+    background: #4a4aff;
+    color: white;
+}
+
+/* IMAGE */
+.image img {
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+
+.about {
+    padding: 80px;
+    background: #ffffff;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-image img {
+    width: 280px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.about-text h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.bar {
+    background: #eee;
+    height: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    border-radius: 20px;
+}
+
+.ux { width: 90%; background: #4a4aff; }
+.web { width: 85%; background: #ff7a18; }
+.html { width: 80%; background: #00c896; }
+
+
+.services {
+    background: #f5f7ff;
+    padding: 80px;
+    text-align: center;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .image img {
+        width: 250px;
+        margin-bottom: 30px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 220px;
+    }
+
+    .services,
+    .portfolio {
+        padding: 40px 20px;
+    }
+}
+
+
+.contact {
+    background: #f5f7ff;
+    padding: 80px;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.contact-form button {
+    padding: 15px;
+    border: none;
+    background: #4a4aff;
+    color: white;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #3434d9;
+}
+
+
+section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
